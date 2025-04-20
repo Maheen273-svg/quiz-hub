@@ -420,6 +420,37 @@
     function toggleTheme() {
       document.body.classList.toggle('dark');
     }
+    <style>
+      /* Floating Chat Button */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 28px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.chat-button:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}
+  </style>
+    <!-- Floating Chat Button -->
+<a href="https://wa.me/9477299905" class="chat-button" target="_blank" aria-label="Chat on WhatsApp">
+  💬
+</a>
+
   </script>
 
 </body>
