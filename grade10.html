@@ -255,6 +255,14 @@
         <h3 class="quiz-title">Sinhala Quiz</h3>
         <p>Test your knowledge in the Sinhala language!</p>
         <a href="https://forms.gle/sinhala_quiz_link" target="_blank">Join Quiz</a>
+        <div class="rating-container">
+  <span class="star" onclick="rate(this, 1)">★</span>
+  <span class="star" onclick="rate(this, 2)">★</span>
+  <span class="star" onclick="rate(this, 3)">★</span>
+  <span class="star" onclick="rate(this, 4)">★</span>
+  <span class="star" onclick="rate(this, 5)">★</span>
+</div>
+
       </div>
 
       <!-- English Quiz Card -->
@@ -262,28 +270,78 @@
         <h3 class="quiz-title">English Quiz</h3>
         <p>Test your knowledge in the English language!</p>
         <a href="https://forms.gle/english_quiz_link" target="_blank">Join Quiz</a>
+        <div class="rating-container">
+  <span class="star" onclick="rate(this, 1)">★</span>
+  <span class="star" onclick="rate(this, 2)">★</span>
+  <span class="star" onclick="rate(this, 3)">★</span>
+  <span class="star" onclick="rate(this, 4)">★</span>
+  <span class="star" onclick="rate(this, 5)">★</span>
+</div>
+
       </div>
        <div class="quiz-card">
         <h3 class="quiz-title">History Quiz</h3>
         <p>Test your knowledge in the History subject!</p>
         <a href="https://forms.gle/english_quiz_link" target="_blank">Join Quiz</a>
+         <div class="rating-container">
+  <span class="star" onclick="rate(this, 1)">★</span>
+  <span class="star" onclick="rate(this, 2)">★</span>
+  <span class="star" onclick="rate(this, 3)">★</span>
+  <span class="star" onclick="rate(this, 4)">★</span>
+  <span class="star" onclick="rate(this, 5)">★</span>
+</div>
+
       </div>
       
  <div class="quiz-card">
         <h3 class="quiz-title">Religion Quiz</h3>
         <p>Test your knowledge in the Religion subject!</p>
         <a href="https://forms.gle/english_quiz_link" target="_blank">Join Quiz</a>
+   <div class="rating-container">
+  <span class="star" onclick="rate(this, 1)">★</span>
+  <span class="star" onclick="rate(this, 2)">★</span>
+  <span class="star" onclick="rate(this, 3)">★</span>
+  <span class="star" onclick="rate(this, 4)">★</span>
+  <span class="star" onclick="rate(this, 5)">★</span>
+</div>
+
       </div>
        <div class="quiz-card">
         <h3 class="quiz-title">Maths Quiz</h3>
         <p>Test your knowledge in the Maths subject!</p>
         <a href="https://forms.gle/english_quiz_link" target="_blank">Join Quiz</a>
+         <div class="rating-container">
+  <span class="star" onclick="rate(this, 1)">★</span>
+  <span class="star" onclick="rate(this, 2)">★</span>
+  <span class="star" onclick="rate(this, 3)">★</span>
+  <span class="star" onclick="rate(this, 4)">★</span>
+  <span class="star" onclick="rate(this, 5)">★</span>
+</div>
+
       </div>
       <!-- ICT Quiz Card -->
       <div class="quiz-card">
         <h3 class="quiz-title">ICT Quiz</h3>
         <p>Test your knowledge in Information and Communication Technology (ICT).</p>
         <a href="https://forms.gle/ict_quiz_link" target="_blank">Join Quiz</a>
+        <div class="rating-container">
+  <span class="star" onclick="rate(this, 1)">★</span>
+  <span class="star" onclick="rate(this, 2)">★</span>
+  <span class="star" onclick="rate(this, 3)">★</span>
+  <span class="star" onclick="rate(this, 4)">★</span>
+  <span class="star" onclick="rate(this, 5)">★</span>
+</div>
+<style>.rating-container {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.rating-container .star.selected {
+  color: gold;
+}
+</style>
       </div>
     </div>
   </section>
@@ -342,6 +400,14 @@
     function toggleTheme() {
       document.body.classList.toggle('dark-mode');
     }
+    function rate(el, value) {
+  const container = el.parentNode;
+  const stars = container.querySelectorAll('.star');
+  stars.forEach((star, index) => {
+    star.classList.toggle('selected', index < value);
+  });
+}
+
   </script>
     <style>
       /* Floating Chat Button */
