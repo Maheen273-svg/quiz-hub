@@ -315,7 +315,24 @@
         <h3 class="quiz-title">Math Challenge</h3>
         <p>Are you ready for a tough math competition?</p>
         <a href="https://forms.gle/789xyz" target="_blank" onclick="trackQuizClick('Math Challenge')">Join Quiz</a>
-      </div>
+      <div class="rating-container">
+  <span class="star" onclick="rate(this, 1)">★</span>
+  <span class="star" onclick="rate(this, 2)">★</span>
+  <span class="star" onclick="rate(this, 3)">★</span>
+  <span class="star" onclick="rate(this, 4)">★</span>
+  <span class="star" onclick="rate(this, 5)">★</span>
+</div>
+<style>.rating-container {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.rating-container .star.selected {
+  color: gold;
+}
+</style>
     </div>
   </section>
 
@@ -420,6 +437,14 @@
     function toggleTheme() {
       document.body.classList.toggle('dark');
     }
+    function rate(el, value) {
+  const container = el.parentNode;
+  const stars = container.querySelectorAll('.star');
+  stars.forEach((star, index) => {
+    star.classList.toggle('selected', index < value);
+  });
+}
+
      </script>
     <style>
       /* Floating Chat Button */
