@@ -179,6 +179,50 @@
     .join-world:hover {
       background: linear-gradient(135deg, #ff4b2b, #ff416c);
     }
+
+    /* ✅ Mobile Optimization */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .intro {
+        font-size: 1rem;
+        padding: 0 15px;
+      }
+
+      .quiz-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .quiz-card {
+        width: 90%;
+      }
+
+      .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+
+      .top-controls {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+      }
+
+      .language-switch {
+        display: flex;
+        gap: 5px;
+      }
+
+      .language-switch button,
+      .theme-toggle {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -190,7 +234,7 @@
       <button onclick="switchLanguage('en')">English</button>
       <button onclick="switchLanguage('si')">සිංහල</button>
     </div>
-      </div>
+  </div>
 
   <!-- Header Section -->
   <header>
@@ -287,4 +331,3 @@
 
 </body>
 </html>
-
