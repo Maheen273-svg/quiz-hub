@@ -465,31 +465,7 @@
 <a href="https://wa.me/9477299905" class="chat-button" target="_blank" aria-label="Chat on WhatsApp">
   💬
 </a>
-  <script>
-  function rate(star, rating, quiz) {
-    let ratings = JSON.parse(localStorage.getItem('quizRatings')) || {};
-    if (!ratings[quiz]) ratings[quiz] = [];
-
-    ratings[quiz].push(rating);
-    localStorage.setItem('quizRatings', JSON.stringify(ratings));
-    updateAverage(quiz);
-  }
-
-  function updateAverage(quiz) {
-    let ratings = JSON.parse(localStorage.getItem('quizRatings')) || {};
-    if (!ratings[quiz] || ratings[quiz].length === 0) return;
-
-    let sum = ratings[quiz].reduce((a, b) => a + b, 0);
-    let avg = (sum / ratings[quiz].length).toFixed(1);
-    document.getElementById(`avg-${quiz}`).innerText = `Average Rating: ${avg}`;
-  }
-
-  // Load all averages on page load
-  window.onload = function () {
-    const quizIds = ['ict', /* add more quiz keys like 'maths', 'english' */];
-    quizIds.forEach(updateAverage);
-  };
-</script>
+ 
 
 </body>
 </html>
