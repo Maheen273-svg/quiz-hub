@@ -224,6 +224,46 @@
         font-size: 0.8rem;
       }
     }
+    <!-- Floating Top-Left Controls -->
+<div class="floating-top-left">
+  <a href="index.html" class="floating-btn" title="Back to Home">🏠</a>
+  <button onclick="location.reload()" class="floating-btn" title="Refresh Page">🔄</button>
+</div>
+
+    <style>
+.floating-top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.floating-btn {
+  background-color: #6c63ff;
+  color: white;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  background-color: #574bff;
+}
+</style>
+
   </style>
 </head>
 <body>
