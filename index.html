@@ -264,11 +264,14 @@
 <body>
 
   <!-- Language Switch -->
-  <div class="language-switch">
-    <button onclick="switchLanguage('en')">English 😊 </button>
-    <button onclick="switchLanguage('si')">සිංහල 😁</button>
-    <button onclick="toggleTheme()">🌙 Toggle Theme</button>
-  </div>
+  
+    <!-- Floating Language and Theme Buttons -->
+<div class="language-switch">
+  <button onclick="switchLanguage('en')" title="English">English 😊</button>
+  <button onclick="switchLanguage('si')" title="සිංහල">සිංහල 😁</button>
+  <button onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+</div>
+
 
   <!-- Header Section -->
   <header>
@@ -492,7 +495,49 @@
 <a href="https://wa.me/9477299905" class="chat-button" target="_blank" aria-label="Chat on WhatsApp">
   💬
 </a>
+  <style>
+    
+/* Floating Language and Theme Buttons */
+.language-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
 
+.language-switch button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.language-switch button:hover {
+  transform: scale(1.1);
+}
+
+.language-switch button:nth-child(1) {
+  background-color: #007bff; /* English - Blue */
+}
+
+.language-switch button:nth-child(2) {
+  background-color: #ffc107; /* Sinhala - Yellow */
+  color: black;
+}
+
+.language-switch button:nth-child(3) {
+  background-color: #000; /* Theme - Black */
+}
+</style>
  
 
 </body>
